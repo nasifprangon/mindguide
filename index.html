@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>MindGuide - Mental Health Assistant</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>MindGuide</h1>
+    <p>Your AI companion for mental wellness</p>
+
+    <textarea id="promptInput" placeholder="Describe how you're feeling..."></textarea>
+
+    <div class="button-group">
+      <button onclick="sendPrompt()">Send Custom Prompt</button>
+
+      <button onclick="usePreset(`Summarize the following reviews: [Review 1] I like this service... [Review 2] It was helpful...`)">
+        Summarize Reviews
+      </button>
+
+      <button onclick="usePreset(`Act as a privacy expert. Compare the following two privacy policies: Policy A: ... Policy B: ...`)">
+        Evaluate Privacy Policy
+      </button>
+
+      <button onclick="usePreset(`Given these therapy providers: 1. CalmCare (online, $), 2. MindSpring (offline, free), 3. ZenLine (chat-based), which one is best for someone with anxiety and low budget?`)">
+        Find Best Service (Prompt-Only)
+      </button>
+
+      <button onclick="usePreset(`Extract pros and cons from this feedback: "The app was fast but too expensive."`)">
+        Extract Pros & Cons
+      </button>
+
+      <button onclick="usePreset(`Given the following relationships: [A connects to B], [B connects to C], and user prefers node C's features, recommend the best starting point.`)">
+        Graph-Based Suggestion
+      </button>
+
+      <button onclick="usePreset(`Act as a mental health coach. The user says: "I can't sleep at night and I feel nervous." What should they do?`)">
+        Roleplay as Coach
+      </button>
+    </div>
+
+    <div id="response" class="response-box"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

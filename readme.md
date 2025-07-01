@@ -4,13 +4,16 @@
 
 ---
 
-##  Features
 
--  **Prompt-only mental health feedback** (no DB required)
--  Buttons to test different prompt strategies (summarization, extraction, reasoning)
--  Secure API key handling via `.env`
--  Frontend built with HTML, CSS, and JavaScript
--  Flask backend to handle OpenAI API requests
+## How it works
+- Single prompt input + LLM-based classification
+- Routes query to appropriate backend logic
+- Debug window shows internal LLM category decision
+
+## Stack
+- Frontend: HTML, JS
+- Backend: Flask + OpenAI API
+
 
 ---
 

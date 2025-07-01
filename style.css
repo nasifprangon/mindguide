@@ -42,15 +42,6 @@ textarea {
   margin-bottom: 20px;
 }
 
-/* Button Group */
-.button-group {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-  margin-bottom: 20px;
-}
-
 /* Button Styling */
 button {
   padding: 10px 18px;
@@ -61,10 +52,24 @@ button {
   font-size: 0.95em;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  margin-bottom: 20px;
 }
 
 button:hover {
   background-color: #357ab7;
+}
+
+/* Debug Box */
+.debug-box {
+  background-color: #fffbe5;
+  padding: 10px;
+  border-radius: 6px;
+  color: #8a6d3b;
+  font-size: 0.9em;
+  border: 1px solid #f0e68c;
+  margin-bottom: 10px;
+  text-align: left;
+  white-space: pre-wrap;
 }
 
 /* Response Box */

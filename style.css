@@ -84,3 +84,19 @@ button:hover {
   white-space: pre-wrap;
   border: 1px solid #cbd5e0;
 }
+
+.note {
+  background-color: #e6f7ff;
+  border-left: 5px solid #4a90e2;
+  padding: 15px;
+  margin-bottom: 20px;
+  text-align: left;
+  font-size: 0.95em;
+  border-radius: 8px;
+}
+
+.website-list {
+  margin-top: 8px;
+  padding-left: 20px;
+  color: #2d3748;
+}

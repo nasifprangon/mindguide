@@ -1,58 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <title>MindGuide - Mental Health Assistant</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
   <div class="container">
     <h1>MindGuide</h1>
     <p>Your AI companion for mental wellness</p>
-    
+
     <div class="note">
-      <strong>Note:</strong> Ask questions about specific mental health services. For best results, include the website or service name in your query.<br><br>
+      <strong>Note:</strong> Ask questions about specific mental health services. For best results, include the website
+      or service name in your query.<br><br>
       <em>Supported websites:</em>
-      <ul class="website-grid">
-        <li>BetterHelp</li>
-        <li>Calmerry</li>
-        <li>Cerebral</li>
-        <li>CIMHS</li>
-        <li>Grow Therapy</li>
-        <li>Online-Therapy</li>
-        <li>Regain</li>
-        <li>Talkspace</li>
-        <li>Brightside</li>
-        <li>Talkiatry</li>
-        <li>Monument</li>
-        <li>TherapyDen</li>
-        <li>Open Path Collective</li>
-        <li>Therapy for Black Girls</li>
-        <li>Teen Counseling</li>
-        <li>MDLIVE</li>
-        <li>Thriveworks</li>
-        <li>Little Otter Health</li>
-        <li>Dove Recovery</li>
-        <li>Zinnia Health</li>
-      </ul>
+      <div class="website-grid">
+        <span>BetterHelp</span>
+        <span>Calmerry</span>
+        <span>Cerebral</span>
+        <span>CIMHS</span>
+        <span>Grow Therapy</span>
+        <span>Online-Therapy</span>
+        <span>Regain</span>
+        <span>Talkspace</span>
+        <span>Brightside</span>
+        <span>Talkiatry</span>
+        <span>Monument</span>
+        <span>TherapyDen</span>
+        <span>Open Path Collective</span>
+        <span>Therapy for Black Girls</span>
+        <span>Teen Counseling</span>
+        <span>MDLIVE</span>
+        <span>Thriveworks</span>
+        <span>Little Otter Health</span>
+        <span>Dove Recovery</span>
+        <span>Zinnia Health</span>
+      </div>
+
+
+      <!-- Mode selection -->
+      <label for="modeSelect"><strong>Choose Assistant Mode:</strong></label>
+      <select id="modeSelect">
+        <option value="llm_only">GPT Only</option>
+        <option value="llm_csv">GPT + Dataset Enhanced</option>
+      </select>
+
+      <!-- User prompt -->
+      <textarea id="promptInput" placeholder="Ask me anything..."></textarea>
+      <button onclick="sendPrompt()">Ask</button>
+
+      <!-- Response & debug -->
+      <div id="response" class="response-box"></div>
+      <div id="debug" class="debug-box"></div>
     </div>
 
-    <!-- Mode selection -->
-    <label for="modeSelect"><strong>Choose Assistant Mode:</strong></label>
-    <select id="modeSelect">
-      <option value="llm_only">GPT Only</option>
-      <option value="llm_csv">GPT + Dataset Enhanced</option>
-    </select>
-
-    <!-- User prompt -->
-    <textarea id="promptInput" placeholder="Ask me anything..."></textarea>
-    <button onclick="sendPrompt()">Ask</button>
-
-    <!-- Response & debug -->
-    <div id="response" class="response-box"></div>
-    <div id="debug" class="debug-box"></div>
-  </div>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>

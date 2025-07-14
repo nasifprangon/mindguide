@@ -18,8 +18,17 @@ async function sendPrompt() {
 
     responseBox.innerText = data.reply;
 
+    // Format category name
+    const categoryMap = {
+      llm_only: "LLM Only",
+      info: "Information Summary",
+      reviews: "User Reviews",
+      unknown: "General Support"
+    };
+    const displayCategory = categoryMap[data.category] || "N/A";
+
     debugBox.innerHTML = `
-      <strong>Category:</strong> ${data.category || 'N/A'}<br>
+      <strong>Category:</strong> ${displayCategory}<br>
       <strong>Tokens:</strong> ${data.tokens || 0}<br>
       <strong>Response Time:</strong> ${data.time || 0}s
     `;
@@ -28,9 +37,4 @@ async function sendPrompt() {
     debugBox.innerText = '';
     console.error('Fetch error:', error);
   }
-}
-
-function usePreset(text) {
-  document.getElementById('promptInput').value = text;
-  sendPrompt();
 }

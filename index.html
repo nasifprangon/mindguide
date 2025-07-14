@@ -40,8 +40,8 @@
     <!-- Mode selection -->
     <label for="modeSelect"><strong>Choose Assistant Mode:</strong></label>
     <select id="modeSelect">
-      <option value="gpt">GPT Only</option>
-      <option value="csv">GPT + CSV Enhanced</option>
+      <option value="llm_only">GPT Only</option>
+      <option value="llm_csv">GPT + Dataset Enhanced</option>
     </select>
 
     <!-- User prompt -->
@@ -49,8 +49,8 @@
     <button onclick="sendPrompt()">Ask</button>
 
     <!-- Response & debug -->
-    <div id="debug" class="debug-box"></div>
     <div id="response" class="response-box"></div>
+    <div id="debug" class="debug-box"></div>
   </div>
 
   <script src="script.js"></script>

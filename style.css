@@ -112,3 +112,18 @@ select {
   border: 1px solid #cbd5e0;
   margin-bottom: 20px;
 }
+
+.website-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  margin-top: 10px;
+  font-size: 0.95em;
+  color: #2d3748;
+}
+
+.website-grid span {
+  background-color: #f0f4f8;
+  padding: 6px 10px;
+  border-radius: 6px;
+}

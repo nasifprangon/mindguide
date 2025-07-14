@@ -37,11 +37,18 @@
       </ul>
     </div>
 
+    <!-- Mode selection -->
+    <label for="modeSelect"><strong>Choose Assistant Mode:</strong></label>
+    <select id="modeSelect">
+      <option value="gpt">GPT Only</option>
+      <option value="csv">GPT + CSV Enhanced</option>
+    </select>
 
+    <!-- User prompt -->
     <textarea id="promptInput" placeholder="Ask me anything..."></textarea>
-
     <button onclick="sendPrompt()">Ask</button>
 
+    <!-- Response & debug -->
     <div id="debug" class="debug-box"></div>
     <div id="response" class="response-box"></div>
   </div>

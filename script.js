@@ -15,12 +15,17 @@ async function sendPrompt() {
     });
 
     const data = await response.json();
-
     responseBox.innerText = data.reply;
 
-    // Format category name
-    const categoryMap = {
+    // Mode display name
+    const modeMap = {
       llm_only: "LLM Only",
+      llm_csv: "LLM + Dataset Enhanced"
+    };
+    const displayMode = modeMap[mode] || "Unknown Mode";
+
+    // Category display name
+    const categoryMap = {
       info: "Information Summary",
       reviews: "User Reviews",
       unknown: "General Support"
@@ -28,6 +33,7 @@ async function sendPrompt() {
     const displayCategory = categoryMap[data.category] || "N/A";
 
     debugBox.innerHTML = `
+      <strong>Mode:</strong> ${displayMode}<br>
       <strong>Category:</strong> ${displayCategory}<br>
       <strong>Tokens:</strong> ${data.tokens || 0}<br>
       <strong>Response Time:</strong> ${data.time || 0}s
